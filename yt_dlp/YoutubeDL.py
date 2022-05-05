@@ -2922,6 +2922,7 @@ class YoutubeDL:
             info_dict['formats'] = formats
 
         info_dict, _ = self.pre_process(info_dict)
+        self.to_screen('[title] "%s"' % info_dict['title'])
 
         if self._match_entry(info_dict, incomplete=self._format_fields) is not None:
             return info_dict
